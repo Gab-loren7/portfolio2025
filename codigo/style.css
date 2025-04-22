@@ -1,0 +1,884 @@
+/* Titulo */
+@import url('https://fonts.googleapis.com/css2?family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/*   font-family: "Unna", serif;*/
+
+/* Sub-Titulo */
+@import url('https://fonts.googleapis.com/css2?family=Stoke:wght@300;400&display=swap');
+/*  font-family: "Stoke", serif; */
+
+/* Texto */
+@import url('https://fonts.googleapis.com/css2?family=Fjord+One&display=swap');
+/*  font-family: "Fjord One", serif; */
+
+
+/*ESTILO GERAL*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fjord One", serif;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+    background-color: #0f0f0f;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ecc02d;
+    border-radius: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+    block-size: 100%;
+  inline-size: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+.capa {
+    background-image: url(/IMG/CAPAS/capaPortfolio\ 2.png);
+    background-position: top;
+    background-repeat: no-repeat;
+
+    z-index: 0;
+    height: 1020px;
+    border: 2px solid transparent;
+    border-bottom: 5px solid #ecc02d;
+}
+
+body {
+    background-image: url(/IMG/CAPAS/bg.png);
+    background-position: center;
+    height: 3000px;
+    z-index: 5;
+    overflow-x: hidden;
+    display: grid;
+}
+
+.interface {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/*ESTILO DO CABEÇARIO*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    background-color: transparent;
+    border-bottom: 2px solid transparent;
+    /* Inicialmente invisível */
+    transition: border-bottom 0.3s ease-in-out;
+    z-index: 10;
+    transition: .2s;
+}
+
+header .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    opacity: 30%;
+    margin-top: 2px;
+    width: 65px;
+    transition: .5s;
+}
+
+.logo img:hover {
+    opacity: 100%;
+    scale: calc(1.05);
+}
+
+header a {
+    display: inline-block;
+    color: #696969;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+header li a:hover {
+    color: #d1d1d1;
+    transform: scale(1.05);
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    position: relative;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 40px;
+    margin-top: 2px;
+    font-size: 20px;
+}
+
+header .btn button {
+    padding: 10px 50px;
+    font-size: 18px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #696969;
+    transition: 0.5s;
+}
+
+header .btn button:hover {
+    color: #d1d1d1;
+    border: 1px solid #d1d1d1;
+    transform: scale(1.05);
+    box-shadow: 0 0 5px;
+}
+
+/* NAVBAR PORTFÓLIO */
+header nav ul li a {
+    display: block;
+}
+
+.drop-hover {
+    position: relative;
+}
+
+/* Animação para o dropdown */
+.drop-hover .drop {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+}
+
+/* Animação para a imagem */
+.drop-hover a .arrowBranco {
+    width: 15px;
+    height: 15px;
+    opacity: 30%;
+    transform: rotate(90deg);
+    margin-left: 5px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Quando passar o mouse sobre a .drop-hover, tudo será ativado */
+.drop-hover:hover .drop {
+    height: 80px;
+    padding-left: 5px;
+    color: #696969;
+}
+
+.drop-hover:hover .arrowBranco {
+    opacity: 100%;
+    transform: rotate(270deg);
+}
+
+/* FIM NAVBAR PORTFÓLIO */
+
+/*DIV-CAPA*/
+.div-capa {
+    margin-bottom: 270px;
+}
+
+#sobreMim {
+    /* border: 2px solid red; */
+    height: 30px;
+    margin-bottom: 100px;
+}
+
+.main {
+    display: flex;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+}
+
+main .div-capa h1 {
+    font-family: "Unna", serif;
+    font-size: 170px;
+    font-weight: 600;
+    color: #ecc02d;
+
+    max-width: 50%;
+    margin: 15% 0 0 0;
+    position: relative;
+    display: inline-block;
+    cursor: auto;
+}
+
+main .div-capa h1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 20px; /* distância da linha até o texto */
+    width: 0%;
+    height: 8px;
+    background-color: #ecc02d;
+    transition: width 0.4s ease;
+}
+
+main .div-capa h1:hover::after {
+    width: 100%;
+}
+
+main p {
+    text-align: justify;
+    max-width: 50%;
+    margin-top: 5px;
+    font-size: 28px;
+    font-weight: 400;
+    color: #d1d1d1;
+}
+
+main p span {
+    font-size: 60px;
+    line-height: 1px;
+}
+
+main .div-capa button {
+    margin-top: 3%;
+    padding: 15px 150px;
+    font-size: 26px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color: #ecc02d;
+    color: #000;
+    transition: 0.5s;
+}
+
+main .div-capa button:hover {
+    color: #d1d1d1;
+    background: transparent;
+    border: 1px solid #d1d1d1;
+    transform: scale(1.05);
+    box-shadow: 0 0 5px;
+}
+
+main .btn i {
+    margin-left: 5px;
+    padding-top: 20px;
+}
+
+/*FIM DIV-CAPA*/
+
+/* DIV-SOBREMIM */
+main .div-sobremim {
+    /* border: 2px solid red; */
+    width: 1200px;
+    /* ou o valor que você desejar */
+    height: 800px;
+    display: flex;
+    margin: 0 auto;
+    /* centraliza horizontalmente */
+    align-items: center;
+    justify-content: center;
+    /* se quiser centralizar também os conteúdos internos */
+}
+
+main .div-sobremim .box1 {
+    /* border: 2px solid green; */
+    width: 500px;
+    height: 100%;
+    margin-right: 3%;
+}
+
+/* BOX PERFIL */
+main .div-sobremim .box1 .boxPerfil {
+    background-image: url(/IMG/EU\ E\ MEU\ AMOR.webp);
+    background-size: 140%;
+    background-repeat: no-repeat;
+    background-position: -140px -50px;
+
+    border: 15px solid #ecc02d;
+    border-bottom-right-radius: 70px;
+
+    width: 450px;
+    height: 450px;
+    margin-bottom: 30px;
+}
+
+/* FIM BOX PERFIL */
+
+/* BOX SOBRE MIM */
+main .div-sobremim .box1 .boxSobreMim {
+    border: 15px solid #ecc02d;
+    border-bottom-left-radius: 70px;
+
+    width: 450px;
+    height: 450px;
+    padding: 15px;
+
+}
+
+main .div-sobremim .box1 .boxSobreMim h1 {
+    font-family: "Stoke", serif;
+    font-size: 36px;
+    font-weight: 300;
+    color: #f1f1f1;
+}
+
+main .div-sobremim .box1 .boxSobreMim p {
+    color: #f1f1f1;
+    font-family: "Fjord One", serif;
+    font-size: 17px;
+    text-align: justify;
+
+    max-width: 100%;
+    margin-top: 10px;
+
+}
+
+/* FIM BOX SOBRE MIM */
+
+/* BOX EDUCAÇÃO DESIGN*/
+main .div-sobremim .box2 {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 77%;
+}
+
+main .div-sobremim .box2 .educacao,
+.design {
+    border: 15px solid #ecc02d;
+
+    width: 48%;
+    height: 100%;
+    padding: 15px;
+}
+
+main .div-sobremim .div-educacaoDesignProgramacao {
+    /* border: 2px solid red;  */
+
+    width: 1200px;
+    height: 800px;
+}
+
+/* BOX EDUCAÇÃO */
+main .div-sobremim .box2 .educacao {
+    border-top-right-radius: 70px;
+    padding: 15px;
+}
+
+main .div-sobremim .box2 .educacao h1 {
+    font-family: "Stoke", serif;
+    font-size: 36px;
+    font-weight: 300;
+    color: #f1f1f1;
+}
+
+main .div-sobremim .box2 .educacao h2 {
+    color: #f1f1f1;
+    font-family: "Stoke", serif;
+    font-weight: 300;
+    font-size: 20px;
+
+    margin-top: 20px;
+}
+
+main .div-sobremim .box2 .educacao h3 {
+    color: #f1f1f1;
+    font-family: "Fjord One", serif;
+    ;
+    font-weight: 300;
+    font-size: 16px;
+
+    justify-content: left;
+    max-width: 90%;
+    margin-top: 20px;
+}
+
+main .div-sobremim .box2 .educacao p {
+    color: #f1f1f1;
+    font-family: "Fjord One", serif;
+
+    font-weight: 300;
+    font-size: 16px;
+    margin-top: 20px;
+
+    width: 180px;
+    padding: 5px;
+    border: 1px solid #f1f1f1;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* FIM BOX EDUCAÇÃO */
+
+/* BOX DESIGN */
+main .div-sobremim .box2 .design {
+    border-bottom-left-radius: 70px;
+}
+
+main .div-sobremim .box2 .design .programasDesign {
+    /* border: 2px solid red; */
+    width: 100%;
+    height: auto;
+
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px 0px;
+}
+
+main .div-sobremim .box2 .design h1 {
+    color: #f1f1f1;
+    font-family: "Stoke", serif;
+    font-weight: 300;
+    font-size: 36px;
+}
+
+main .div-sobremim .box2 .design button {
+    padding: 10px 50px;
+    width: 400px;
+
+    display: block;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 75px;
+
+    font-size: 26px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color: #ecc02d;
+    color: #000;
+    transition: 0.5s;
+
+}
+
+main .div-sobremim .box2 .design button:hover {
+    color: #d1d1d1;
+    background: transparent;
+    border: 1px solid #d1d1d1;
+    transform: scale(1.05);
+    box-shadow: 0 0 5px;
+}
+
+main .div-sobremim .box2 .design .programasDesign .boxLogo {
+    /* border: 2px solid red; */
+    width: 50%;
+    height: 30%;
+    margin-top: 15px;
+    display: flex;
+
+}
+
+main .div-sobremim .box2 .design .programasDesign .boxLogo img {
+    width: 80px;
+    height: 80px;
+    margin-top: 15px;
+}
+
+main .div-sobremim .box2 .design .programasDesign .boxLogo .informacoes {
+    margin-left: 10px;
+}
+
+main .div-sobremim .box2 .design .programasDesign .boxLogo .informacoes h2 {
+    color: #f1f1f1;
+    font-family: "Stoke", serif;
+    font-weight: 300;
+    font-size: 20px;
+
+    margin-top: 20px;
+}
+
+main .div-sobremim .box2 .design .programasDesign .boxLogo .informacoes .formas {
+    display: flex;
+    margin-top: 10px;
+}
+
+main .div-sobremim .box2 .design .programasDesign .boxLogo .informacoes .formas .forma1,
+.forma2,
+.forma3,
+.forma4,
+.forma5 {
+    width: 15px;
+    height: 15px;
+
+    background-color: #f1f1f1;
+    border: 1px solid #f1f1f1;
+    border-radius: 50px;
+}
+
+main .div-sobremim .box2 .design .programasDesign .boxLogo .informacoes hr {
+    margin-top: 15px;
+    width: 60px;
+
+    border: 1px solid #f1f1f1;
+}
+
+/* FIM BOX DESIGN */
+
+/* FIM BOX EDUCAÇÃO DESIGN */
+
+/* BOX PROGRAMAÇÃO */
+main .div-sobremim .programacao {
+    border: 15px solid #ecc02d;
+    border-top-right-radius: 70px;
+
+    padding: 15px;
+    width: 1200px;
+    height: 35.5%;
+    margin-top: 30px;
+}
+
+main .div-sobremim .programacao h1 {
+    color: #f1f1f1;
+    font-family: "Stoke", serif;
+    font-weight: 300;
+    font-size: 36px;
+}
+
+main .div-sobremim .programacao .logos {
+    display: flex;
+    margin-top: 3px;
+
+}
+
+main .div-sobremim .programacao .logos .boxLogo {
+    /* border: 2px solid red; */
+    width: 280px;
+    height: 165px;
+    margin-left: 20px;
+    display: flex;
+}
+
+main .div-sobremim .programacao .logos .boxLogo img {
+    width: 100px;
+    height: 100px;
+
+
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+main .div-sobremim .programacao .logos .boxLogo .informacoes {
+    /* border: 2px solid red; */
+
+    margin-left: 15px;
+    width: 300px;
+}
+
+main .div-sobremim .programacao .logos .boxLogo .informacoes h2 {
+    width: 100%;
+    margin-top: 20%;
+
+    color: #f1f1f1;
+    font-family: "Stoke", serif;
+    font-weight: 300;
+}
+
+main .div-sobremim .programacao .logos .boxLogo .informacoes .formas {
+    display: flex;
+    margin-top: 10px;
+}
+
+main .div-sobremim .programacao .logos .boxLogo .informacoes .formas .forma1,
+.forma2,
+.forma3,
+.forma4,
+.forma5 {
+    width: 15px;
+    height: 15px;
+
+    background-color: #f1f1f1;
+    border: 1px solid #f1f1f1;
+    border-radius: 50px;
+}
+
+main .div-sobremim .programacao .logos .boxLogo .informacoes hr {
+    margin-top: 20px;
+    width: 60px;
+
+    border: 1px solid #f1f1f1;
+
+}
+
+/* FIM BOX PROGRAMAÇÃO */
+
+/* EFEITO NAS LOGOS */
+
+/* DESIGN */
+main .div-sobremim .box2 .design .programasDesign {
+    transition: .5s;
+    cursor: pointer;
+}
+
+main .div-sobremim .box2 .design .programasDesign:hover> :not(:hover) {
+    opacity: .4;
+    transform: scale(0.9);
+    transition: .5s;
+}
+
+/* PROGRAMAÇÃO */
+main .div-sobremim .programacao .logos {
+    transition: .5s;
+    cursor: pointer;
+}
+
+main .div-sobremim .programacao .logos:hover> :not(:hover) {
+    opacity: .4;
+    transform: scale(0.9);
+    transition: .5s;
+}
+
+/* FIM EFEITO NAS LOGOS */
+
+/* FIM DIV-SOBREMIM */
+
+/* DIV-SLIDER */
+.tituloMinhasMaterias {
+    margin-top: 200px;
+    text-align: center;
+    margin-bottom: -40px;
+
+    color: #f1f1f1;
+    font-family: "Unna", serif;
+    font-size: 75px;
+}
+
+.tituloMinhasMaterias span {
+    color: #ecc02d;
+    font-family: "Unna", serif;
+    font-size: 75px;
+}
+
+/* SLIDER */
+.slider {
+    border: 15px solid #ecc02d;
+    border-radius: 40px;
+
+    height: 700px;
+    width: 80%;
+
+    align-items: center;
+    margin: auto;
+    position: relative;
+}
+
+.slider .slider-container .slider-box {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: .5s;
+
+    border-radius: 20px;
+}
+
+.slider .slider-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider .slider-box::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, #000, transparent);
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.slider .slider-box .texto-slider {
+    position: absolute;
+    left: 12%;
+    top: 25%;
+    z-index: 1;
+    width: 80%;
+    max-width: 700px;
+
+    color: #f1f1f1;
+}
+
+.slider .slider-box .texto-slider h1 {
+    font-size: 5rem;
+    font-family: "Unna", serif;
+}
+
+.slider .slider-box .texto-slider p {
+    max-width: 100%;
+    font-size: 20px;
+    font-family: "Fjord One", serif;
+}
+
+.slider .slider-box .texto-slider button {
+    margin-top: 3%;
+    padding: 5px 50px;
+    font-size: 26px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color: #ecc02d;
+    color: #000;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.slider .slider-box .texto-slider button:hover {
+    color: #d1d1d1;
+    background: transparent;
+    border: 1px solid #d1d1d1;
+    box-shadow: 0 0 5px;
+    scale: calc(1.05);
+}
+
+@keyframes animaTexto {
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slider .slider-box.ativo h1,
+.slider .slider-box.ativo p,
+.slider .slider-box.ativo button {
+    transform: translateY(60px);
+    opacity: 0;
+    animation: animaTexto .3s ease-in-out .4s forwards;
+}
+
+.slider .slider-box.ativo h1 {
+    animation-delay: .4s;
+}
+
+.slider .slider-box.ativo p {
+    animation-delay: .6s;
+}
+
+.slider .slider-box.ativo button {
+    animation-delay: .8s;
+}
+
+.slider-container .slider-box.ativo {
+    opacity: 1;
+    z-index: 8;
+    pointer-events: auto;
+    /* Garante que seja interativo */
+}
+
+/* ESTILO SETAS */
+.setas {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 9;
+
+    pointer-events: none;
+    /* As setas em si não bloqueiam clique */
+}
+
+.setas button,
+.setas .seta {
+    /* Alvo dos cliques */
+    pointer-events: auto;
+    /* Só os botões recebem eventos */
+}
+
+.setas .btn-setas {
+    cursor: pointer;
+
+    border: 3px solid #ecc02d;
+    color: #f1f1f1;
+    background-color: transparent;
+
+    padding: 20px 30px;
+    font-size: 26px;
+    transition: 0.5s;
+}
+
+.setas .btn-setas:hover {
+    color: #0f0f0f;
+    border: 3px solid #ecc02d;
+    background-color: #ecc02d;
+    scale: calc(1.05);
+}
+
+.setas .seta-left {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.setas .seta-right {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+/* FIM ESTILO SETAS */
+
+/* BOTÕES DE NAVEGAÇÃO */
+.btn-nav-box {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-nav-box .btn-nav {
+    width: 35px;
+    height: 15px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn-nav-box .btn-nav:hover {
+    background-color: #ecc02d;
+    scale: calc(1.2);
+}
+
+.btn-nav-box .btn-nav.ativo {
+    background-color: #ecc02d;
+    scale: calc(1.2);
+}
+
+/* FIM BOTÕES DE NAVEGAÇÃO */
+/* FIM DIV-SLIDER */

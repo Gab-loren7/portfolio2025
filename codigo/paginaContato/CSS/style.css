@@ -1,0 +1,188 @@
+/* Titulo */
+@import url('https://fonts.googleapis.com/css2?family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/*   font-family: "Unna", serif;*/
+
+/* Sub-Titulo */
+@import url('https://fonts.googleapis.com/css2?family=Stoke:wght@300;400&display=swap');
+/*  font-family: "Stoke", serif; */
+
+/* Texto */
+@import url('https://fonts.googleapis.com/css2?family=Fjord+One&display=swap');
+/*  font-family: "Fjord One", serif; */
+
+
+/*ESTILO GERAL*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fjord One", serif;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+    background-color: #0f0f0f;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ecc02d;
+    border-radius: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+.capa {
+    background-image: url(/IMG/capaPortfolio\ 2.png);
+    background-position: top;
+    background-repeat: no-repeat;
+
+    z-index: 0;
+    height: 1020px;
+    border: 2px solid transparent;
+    border-bottom: 5px solid #ecc02d;
+}
+
+body {
+    background-image: url(/IMG/bg.png);
+    background-position: center;
+    height: 3000px;
+    z-index: 5;
+    overflow-x: hidden;
+}
+
+.interface {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/*ESTILO DO CABEÇARIO*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    background-color: transparent;
+    border-bottom: 2px solid transparent;
+    /* Inicialmente invisível */
+    transition: border-bottom 0.3s ease-in-out;
+    z-index: 10;
+    transition: .2s;
+}
+
+header .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    opacity: 30%;
+    margin-top: 2px;
+    width: 65px;
+    transition: .5s;
+}
+
+.logo img:hover {
+    opacity: 100%;
+    scale: calc(1.05);
+}
+
+header a {
+    display: inline-block;
+    color: #696969;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+header li a:hover {
+    color: #d1d1d1;
+    transform: scale(1.05);
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    position: relative;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 40px;
+    margin-top: 2px;
+    font-size: 20px;
+}
+
+header .btn button {
+    padding: 10px 50px;
+    font-size: 18px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #696969;
+    transition: 0.5s;
+}
+
+header .btn button:hover {
+    color: #d1d1d1;
+    border: 1px solid #d1d1d1;
+    transform: scale(1.05);
+    box-shadow: 0 0 5px;
+}
+
+/* NAVBAR PORTFÓLIO */
+header nav ul li a {
+    display: block;
+}
+
+.drop-hover {
+    position: relative;
+}
+
+/* Animação para o dropdown */
+.drop-hover .drop {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+}
+
+/* Animação para a imagem */
+.drop-hover a .arrowBranco {
+    width: 15px;
+    height: 15px;
+    opacity: 30%;
+    transform: rotate(90deg);
+    margin-left: 5px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Quando passar o mouse sobre a .drop-hover, tudo será ativado */
+.drop-hover:hover .drop {
+    height: 80px;
+    padding-left: 5px;
+    color: #696969;
+}
+
+.drop-hover:hover .arrowBranco {
+    opacity: 100%;
+    transform: rotate(270deg);
+}
+
+/* FIM NAVBAR PORTFÓLIO */
