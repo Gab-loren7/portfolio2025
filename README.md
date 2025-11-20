@@ -8,7 +8,7 @@
    Feito totalmente em HTML, CSS e JS.
   </h3>
   
-  [![Netlify Status](https://api.netlify.com/api/v1/badges/3d1c9e82-ede1-4a5c-a3cc-ea4c38302ca2/deploy-status)](https://gabriellorenssetti2025.netlify.app/)
+  [![Netlify Status](https://api.netlify.com/api/v1/badges/0cd43f49-9852-4b4f-b732-a401cf0f8907/deploy-status)](https://app.netlify.com/projects/gabriellorenssetti2025/deploys)
   
 </div>
 
