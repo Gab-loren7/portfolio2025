@@ -50,6 +50,10 @@ a {
     height: 800px;
     border: 2px solid transparent;
     border-bottom: 5px solid #ecc02d;
+
+
+    align-content: center;
+    justify-content: center;
 }
 
 body {
@@ -193,6 +197,7 @@ header nav ul li a {
 main {
     max-width: 90%;
     /* text-align: center; */
+    text-align: left;
     align-items: center;
     margin: auto;
 }
@@ -235,4 +240,34 @@ main .section-materias button:hover{
     border: 5px solid #d1d1d1;
     color: #d1d1d1;
     scale: calc(1.02);
+}
+
+ button{
+    margin: auto;
+    display: flex;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    padding: 5px 10%;
+    font-size: 26px;
+    font-weight: 600;
+
+    cursor: pointer;
+    outline: none;
+
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color: #ecc02d;
+    color: #000;
+    transition: 0.5s;
+
+    align-content: center;
+    justify-content: center;
+}
+
+body button:hover{
+    color: #d1d1d1;
+    background-color: transparent;
+    border: 1px solid #d1d1d1;
+    box-shadow: 0 0 5px;
+    scale: calc(1.05);
 }

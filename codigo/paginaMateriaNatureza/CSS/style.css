@@ -201,8 +201,8 @@ header nav ul li a {
 main {
     max-width: 90%;
     /* text-align: center; */
-    align-items: center;
     margin: auto;
+    align-content: center;
 }
 
 /* SECTION TRIMESTRE 1 */
@@ -335,6 +335,34 @@ main .section-trimestre .details-trimestre .conteudo-trimestre hr {
     border-radius: 20px;
 }
 
+main button{
+    margin: auto;
+    display: flex;
+    margin-top: 3%;
+    padding: 5px 10%;
+    font-size: 26px;
+    font-weight: 600;
+
+    cursor: pointer;
+    outline: none;
+
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color: #ecc02d;
+    color: #000;
+    transition: 0.5s;
+
+    align-content: center;
+    justify-content: center;
+}
+
+main button:hover{
+    color: #d1d1d1;
+    background-color: transparent;
+    border: 1px solid #d1d1d1;
+    box-shadow: 0 0 5px;
+    scale: calc(1.05);
+}
 
 /* FIM ATIVIDADES */
 /* FIM SECTION TRIMESTRE 1 */
